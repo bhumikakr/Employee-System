@@ -1,0 +1,45 @@
+<nav class="navbar sticky-top navbar-dark" style="background-color: #5584AC;">
+  <a class="navbar-brand" href="/">Employee-System</a>
+
+  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+    aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars fa-1x"></i></span></button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" class="nav-link" data-toggle="collapse"
+          data-target=".navbar-collapse.show">Home</a>
+      <li>
+        <a routerLink="employees" routerLinkActive="active" class="nav-link" data-toggle="collapse"
+          data-target=".navbar-collapse.show">Employee List</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="add-employee" routerLinkActive="active" class="nav-link" data-toggle="collapse"
+          data-target=".navbar-collapse.show">Add Employee</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="login" routerLinkActive="active" class="nav-link" data-toggle="collapse"
+          data-target=".navbar-collapse.show">Login</a>
+      </li>
+      <li>
+        <a routerLink="logout" routerLinkActive="active" class="nav-link" data-toggle="collapse"
+          data-target=".navbar-collapse.show">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- <h1 class="text-center"> {{title}} </h1> -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <div>
+    <button onclick="history.back()">Go Back</button>
+    <span> © Employee System by Team-7</span>
+  </div>
+</footer>

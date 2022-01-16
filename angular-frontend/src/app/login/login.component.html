@@ -1,0 +1,18 @@
+<h3>Login</h3>
+<div class="login-c-form-wrapper">
+  <form class="loginForm" (ngSubmit)="onLogin()" [formGroup]="loginForm">
+    <mat-form-field appearance="outline">
+      <input class="username" placeholder="Username" formControlName="username" matInput required>
+      <mat-error *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.hasError('required')"> Username
+        Required </mat-error>
+    </mat-form-field>
+    <span> &nbsp;</span>
+    <mat-form-field appearance="outline">
+      <input class="password" type='password' placeholder="Password" formControlName='password' matInput required>
+      <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')"> Password
+        Required </mat-error>
+    </mat-form-field>
+    <span> &nbsp;</span>
+    <button type="submit" mat-flat-button color="primary">Submit</button>
+  </form>
+</div>

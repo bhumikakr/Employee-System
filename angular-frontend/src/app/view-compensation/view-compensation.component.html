@@ -1,0 +1,54 @@
+<h3>View Compensation Details</h3>
+
+<!-- <div>
+  <div>
+    <label> <b> Employee Name: </b></label> <b class="name"> {{employee.firstName}}
+      {{employee.middleName}} {{employee.lastName}} </b>
+  </div>
+  <div>
+    <label> <b> Type: </b></label> {{employee.type}}
+  </div>
+  <div>
+    <label> <b> Amount: </b></label> {{employee.amount}}
+  </div>
+  <div>
+    <label> <b> Date: </b></label> {{employee.date | dateFormatPipe}}
+  </div>
+  <div>
+    <label> <b> Description: </b></label> {{employee.description}}
+  </div>
+  <div>
+    <button (click)="editcompensation(employee.id)" class="btn btn-info"> Edit Compensation </button>
+    <button (click)="historycompensation(employee.id)" class="btn btn-info" style="margin-left: 10px"> View Breakdown
+    </button>
+  </div>
+</div> -->
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> Employee Name</th>
+      <th> Type </th>
+      <th> Amount </th>
+      <th> Date</th>
+      <th> Description</th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <!-- *ngFor="let employee of employee" -->
+      <td> {{employee.firstName}} {{employee.middleName}} {{employee.lastName}} </td>
+      <td> {{employee.type}} </td>
+      <td> {{employee.amount}} </td>
+      <td> {{ employee.date | dateFormatPipe }} </td>
+      <td> {{employee.description}} </td>
+      <td>
+        <button (click)=" editcompensation(employee.id)" class="btn btn-info"> Edit Compensation </button>
+        <button (click)="historycompensation(employee.id)" class="btn btn-info" style="margin-left: 10px"> View
+          Breakdown
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

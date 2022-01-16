@@ -1,0 +1,41 @@
+<h3> Employee List</h3>
+<!-- Search bar -->
+<form class="form-inline">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search First Name" aria-label="Search" name="firstName"
+    [(ngModel)]="firstName" (ngModelChange)="Search1()">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <input class="form-control mr-sm-2" type="search" placeholder="Search Last Name" aria-label="Search" name="lastName"
+    [(ngModel)]="lastName" (ngModelChange)="Search2()">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <input class="form-control mr-sm-2" type="search" placeholder="Search Position" aria-label="Search" name="position"
+    [(ngModel)]="position" (ngModelChange)="Search3()">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> First Name</th>
+      <th> Middle Name </th>
+      <th> Last Name </th>
+      <th> Birth Date</th>
+      <th> Position</th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td> {{ employee.firstName }} </td>
+      <td> {{ employee.middleName }} </td>
+      <td> {{ employee.lastName }} </td>
+      <td> {{ employee.bod | dateFormatPipe }} </td>
+      <td> {{ employee.position }} </td>
+      <td>
+        <button (click)="employeeDetails(employee.id)" class="btn btn-info" color="primary"> View </button>
+        <button (click)="editEmployee(employee.id)" class="btn btn-info" style="margin-left: 10px" color="primary"> Edit
+        </button>
+        <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

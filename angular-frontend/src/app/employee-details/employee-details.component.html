@@ -1,0 +1,24 @@
+<h3> View Employee Details</h3>
+<div>
+  <div>
+    <label> <b> First Name: </b></label> {{employee.firstName}}
+  </div>
+  <div>
+    <label> <b> Middle Name: </b></label> {{employee.middleName}}
+  </div>
+  <div>
+    <label> <b> Last Name: </b></label> {{employee.lastName}}
+  </div>
+  <div>
+    <label> <b> Birth Date: </b></label> {{employee.bod | dateFormatPipe}}
+  </div>
+  <div>
+    <label> <b> Position: </b></label> {{employee.position}}
+  </div>
+  <div>
+    <button (click)="viewcompensation(employee.id)" class="btn btn-info"> View compensation </button>
+    <button (click)="addcompensation(employee.id)" class="btn btn-info" style="margin-left: 10px"> Add compensation
+    </button>
+  </div>
+
+</div>

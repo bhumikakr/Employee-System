@@ -1,0 +1,10 @@
+.container {
+  min-height: 100%;
+}
+
+button {
+  background-color: #5584AC;
+  color: white;
+  float: left;
+  margin-left: 5px;
+}

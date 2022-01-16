@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Add compensation Details</h3>
+  <!-- Form to add Compensation -->
+  <form [formGroup]="addcomp" (ngSubmit)="onSubmit()" class="addcomp">
+    <div class="addcomp">
+      <label> Type</label>
+      <input type="text" class="form-control" [(ngModel)]="employee.type" formControlName="type" list="type" required>
+      <datalist id="type">
+        <option value="Salary">
+        <option value="Bonus">
+        <option value="Commission">
+        <option value="Allowance">
+        <option value="Adjustment">
+      </datalist>
+    </div>
+    <div class="addcomp">
+      <label> Amount</label>
+      <input type="number" class="form-control" [(ngModel)]="employee.amount" formControlName="amount" required="">
+    </div>
+    <div class="addcomp">
+      <label> Date</label>
+      <input type="date" class="form-control" [(ngModel)]="employee.date" formControlName="date" required="">
+    </div>
+    <div class="addcomp">
+      <label> Description </label>
+      <input type="text" class="form-control" [(ngModel)]="employee.description" formControlName="description"
+        required="">
+    </div>
+    <div>
+      <button mat-flat-button color="primary" type="submit" style="margin-top: 10px;">Submit</button>
+    </div>
+  </form>
+</div>

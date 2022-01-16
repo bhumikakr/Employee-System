@@ -1,0 +1,29 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Add Employee</h3>
+  <form ngNativeValidate [formGroup]="addform" (ngSubmit)="onSubmit()" class="addform">
+    <div class="addform">
+      <label> First Name</label>
+      <input type="text" class="form-control" [(ngModel)]="employee.firstName" formControlName="firstName" required="">
+    </div>
+    <div class="addform">
+      <label> Middle Name</label>
+      <input type="text" class="form-control" [(ngModel)]="employee.middleName" formControlName="middleName">
+    </div>
+    <div class="addform">
+      <label> Last Name</label>
+      <input type="text" class="form-control" [(ngModel)]="employee.lastName" formControlName="lastName" required="">
+    </div>
+    <div class="addform">
+      <label> Birth Date</label>
+      <input type="date" class="form-control" [(ngModel)]="employee.bod" formControlName="bod" max="2022-01-03"
+        onchange="validateAge(this)" required="">
+    </div>
+    <div class="addform">
+      <label> Position </label>
+      <input type="text" class="form-control" [(ngModel)]="employee.position" formControlName="position" required="">
+    </div>
+    <div>
+      <button mat-flat-button color="primary" type="submit" style="margin-top: 10px;">Submit</button>
+    </div>
+  </form>
+</div>
