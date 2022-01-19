@@ -16,7 +16,7 @@ Yet to add some features like compensations.
 
 
 ## To Run It Locally:
-- Install mongodb.
+
 - Install Spring Suite Tools.
 - git clone https://github.com/bhumikakr/Employee-System.git
 - Run frontend on terminal.
