@@ -5,7 +5,7 @@ In this application the user can perform CRUD operations for various case user s
 This project was created using Angular, Spring Boot and MongoDB.
 Yet to add some features like compensations.
 
-![app demo]()
+![app demo](demo.gif)
 
 
 ## Advantages:
@@ -24,3 +24,4 @@ Yet to add some features like compensations.
 - npm start
 - Run backend through Spring Suite Tools as Spring Boot App.
 - Then go to localhost:4200.
+- Toggle around and explore different user stories.
