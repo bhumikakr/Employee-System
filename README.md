@@ -1,9 +1,9 @@
 # Employee-System
 
-Employee-System is a portal made for HR/Mangers to maintain a record of the employees.
-In this application the user can perform CRUD operations for various case user stories.
-This project was created using Angular, Spring Boot and MongoDB.
-Yet to add some features like compensations.
+- Employee-System is a portal made for HR/Mangers to maintain a record of the employees.
+- In this application the user can perform CRUD operations for various case user stories.
+- This project was created using Angular, Spring Boot and MongoDB.
+- Yet to add some features like compensations.
 
 ![app demo](demo.gif)
 
@@ -23,5 +23,5 @@ Yet to add some features like compensations.
 - npm install
 - npm start
 - Run backend through Spring Suite Tools as Spring Boot App.
-- Then go to localhost:4200.
+- Then go to localhost:4200
 - Toggle around and explore different user stories.
